@@ -8,7 +8,7 @@ function renderMenu(menuArr){
         html += 
         `
         <section>
-            <div class ="meal" id = ${meal.name}>
+            <div class ="meal">
                 <div class="emoji">
                     <img src="${meal.emoji}">
                 </div>
@@ -18,7 +18,7 @@ function renderMenu(menuArr){
                     <p class="bold">$${meal.price}
                 </div>
                 <div>
-                    <button>+</button>
+                    <button id="${meal.name}">+</button>
                 </div>
             </div>
         </section>
