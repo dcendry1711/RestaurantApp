@@ -3,6 +3,7 @@ import {menuArray} from './data.js'
 const mainMenu = document.getElementById('restaurant-menu')
 const clientOrder = document.getElementById('restaurant-order')
 const orderList = document.getElementById('order-list')
+const completeOrder = document.getElementById('complete-order-button')
 
 function renderMenu(menuArr){
     let html = ''
@@ -47,8 +48,12 @@ function renderOrderList(orderArr){
     for (let i = 0; i < orderArr.length; i++) {
         orderHtml +=
         `
-        <li>${orderArr[i]}</li>
+        <li>${orderArr[i]}<button class="remove-order">remove</button></li>
         `
     }
     return orderHtml
 }
+
+completeOrder.addEventListener('click',function(){
+    console.log('click')
+})

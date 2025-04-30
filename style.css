@@ -58,7 +58,14 @@ ul {
     border-bottom: 1px solid black;
 }
 
-#order-button {
+.remove-order {
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 10px;
+}
+
+#complete-order-button {
     width: 508px;
     height: 60px;
     margin: 0 auto;
