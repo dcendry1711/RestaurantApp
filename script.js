@@ -2,6 +2,7 @@ import {menuArray} from './data.js'
 
 const mainMenu = document.getElementById('restaurant-menu')
 const clientOrder = document.getElementById('restaurant-order')
+const orderList = document.getElementById('order-list')
 
 function renderMenu(menuArr){
     let html = ''
@@ -37,6 +38,17 @@ mainMenu.addEventListener('click',function(e){
     if(e.target.dataset.meal){
         clientOrder.style.visibility = 'visible'
         orderArray.push(e.target.dataset.meal)
-        console.log(orderArray)
+        orderList.innerHTML = renderOrderList(orderArray)
     }
 })
+
+function renderOrderList(orderArr){
+    let orderHtml=''
+    for (let i = 0; i < orderArr.length; i++) {
+        orderHtml +=
+        `
+        <li>${orderArr[i]}</li>
+        `
+    }
+    return orderHtml
+}
